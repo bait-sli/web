@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang= 'en'
+<head>
+  <meta charset="utf-8">
+  <title>Get Position</title>
+</head>
+<body>
+  <script>
+  navigator.geolocation.getCurrentPosition(succes, error);
+  function succes(pos){
+    console.log(pos.coords.latitude);
+    console.log(pos.coords.longitude);
+    confirm('your latitude is: ' + pos.coords.latitude);
+    confirm('your longitude is: ' + pos.coords.longitude);
+  }
+  function error(){
+    console.log('Not localiosed');
+  }
+  </script>
+</body>
+</html>
